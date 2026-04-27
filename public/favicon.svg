@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">UZVibes favicon</title>
+  <desc id="desc">Dark neon UZ mark for UZVibes.</desc>
+  <defs>
+    <linearGradient id="mark" x1="9" x2="55" y1="10" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38e7ff" />
+      <stop offset="0.52" stop-color="#ff4fd8" />
+      <stop offset="1" stop-color="#b8ff5e" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#070914" />
+  <circle cx="18" cy="15" r="18" fill="#38e7ff" opacity="0.18" />
+  <circle cx="51" cy="51" r="20" fill="#ff4fd8" opacity="0.18" />
+  <path
+    d="M16 20v14.8c0 7.2 4.4 11.7 12.1 11.7 7.6 0 12-4.5 12-11.7V20h-7.3v14.4c0 3.7-1.6 5.5-4.7 5.5-3.2 0-4.8-1.8-4.8-5.5V20H16Z"
+    fill="url(#mark)"
+    filter="url(#glow)"
+  />
+  <path d="M42.2 20h7.9L39.8 46h-7.9l10.3-26Z" fill="#f7f8ff" opacity="0.92" />
+</svg>

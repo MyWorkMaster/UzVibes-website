@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">UZVibes social preview</title>
+  <desc id="desc">Neon social-location landing page preview for UZVibes.</desc>
+  <defs>
+    <linearGradient id="brand" x1="160" x2="690" y1="116" y2="514" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38e7ff" />
+      <stop offset="0.48" stop-color="#ff4fd8" />
+      <stop offset="1" stop-color="#b8ff5e" />
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientTransform="translate(193 131) rotate(47) scale(365)">
+      <stop stop-color="#38e7ff" stop-opacity="0.36" />
+      <stop offset="1" stop-color="#38e7ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="0" cy="0" r="1" gradientTransform="translate(1006 481) rotate(47) scale(397)">
+      <stop stop-color="#ff4fd8" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#ff4fd8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#070914" />
+  <rect width="1200" height="630" fill="url(#cyanGlow)" />
+  <rect width="1200" height="630" fill="url(#pinkGlow)" />
+  <g opacity="0.18">
+    <path d="M0 114h1200M0 228h1200M0 342h1200M0 456h1200M0 570h1200" stroke="#fff" />
+    <path d="M114 0v630M228 0v630M342 0v630M456 0v630M570 0v630M684 0v630M798 0v630M912 0v630M1026 0v630M1140 0v630" stroke="#fff" />
+  </g>
+  <g transform="translate(770 86)">
+    <rect width="258" height="462" rx="40" fill="#12162a" stroke="#ffffff" stroke-opacity="0.22" stroke-width="3" />
+    <rect x="17" y="18" width="224" height="426" rx="30" fill="#090b15" />
+    <rect x="80" y="28" width="98" height="22" rx="11" fill="#070914" />
+    <rect x="37" y="78" width="184" height="64" rx="8" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.15" />
+    <text x="55" y="105" fill="#7f89a8" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800">TONIGHT IN</text>
+    <text x="55" y="128" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="900">Tashkent</text>
+    <circle cx="196" cy="111" r="18" fill="url(#brand)" />
+    <rect x="37" y="160" width="184" height="116" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15" />
+    <text x="55" y="193" fill="#7f89a8" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="800">CITY VIBE</text>
+    <text x="55" y="244" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="58" font-weight="900">92%</text>
+    <rect x="37" y="296" width="184" height="54" rx="8" fill="#38e7ff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.16" />
+    <text x="55" y="328" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="900">C1 active now</text>
+    <rect x="37" y="364" width="184" height="54" rx="8" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.16" />
+    <text x="55" y="396" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="900">Shevchenko chat</text>
+  </g>
+  <g transform="translate(86 114)">
+    <rect x="0" y="0" width="82" height="82" rx="20" fill="url(#brand)" />
+    <text x="41" y="53" text-anchor="middle" fill="#050711" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900">UZ</text>
+    <text x="0" y="170" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="82" font-weight="900">Feel the vibe</text>
+    <text x="0" y="257" fill="#f7f8ff" font-family="Inter,Arial,sans-serif" font-size="82" font-weight="900">of your city.</text>
+    <text x="2" y="326" fill="#b9c0d4" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="600">Discover places, chats, events, and friends around Tashkent.</text>
+    <text x="2" y="388" fill="#38e7ff" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="900">UZVIBES · UZVIBES.COM</text>
+  </g>
+</svg>
