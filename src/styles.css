@@ -243,6 +243,7 @@ h3 {
     rgba(255, 255, 255, 0.08);
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
   font-weight: 800;
+  scroll-margin-top: 28px;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -560,7 +561,9 @@ h3 {
 
 #features,
 #city-vibes,
-#download {
+#download,
+#contact,
+#legal-note {
   scroll-margin-top: 28px;
 }
 
@@ -783,7 +786,7 @@ h3 {
 }
 
 .cta-section {
-  padding-bottom: 72px;
+  padding-bottom: 42px;
 }
 
 .cta-panel {
@@ -810,6 +813,62 @@ h3 {
 .cta-panel .download-buttons {
   justify-content: center;
   margin-top: 28px;
+}
+
+.contact-section {
+  padding-top: 18px;
+  padding-bottom: 78px;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: clamp(24px, 4vw, 42px);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(184, 255, 94, 0.12), transparent 16rem),
+    radial-gradient(circle at 84% 80%, rgba(56, 231, 255, 0.16), transparent 16rem),
+    rgba(255, 255, 255, 0.075);
+}
+
+.contact-panel h2 {
+  max-width: 680px;
+  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3.3vw, 3.2rem);
+}
+
+.contact-panel p:not(.eyebrow) {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  border: 1px solid rgba(56, 231, 255, 0.36);
+  border-radius: 999px;
+  padding: 14px 20px;
+  background: rgba(56, 231, 255, 0.1);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
+  color: #fff;
+  font-weight: 900;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(184, 255, 94, 0.72);
+  background: rgba(184, 255, 94, 0.12);
 }
 
 .site-footer {
@@ -855,6 +914,13 @@ h3 {
   display: grid;
   gap: 12px;
   justify-items: end;
+}
+
+.footer-meta small {
+  max-width: 320px;
+  color: var(--soft);
+  text-align: right;
+  line-height: 1.45;
 }
 
 .footer-meta nav {
@@ -975,6 +1041,14 @@ h3 {
   .city-section,
   .community-section {
     gap: 28px;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-link {
+    justify-self: start;
   }
 
   .community-pill {
@@ -1116,6 +1190,10 @@ h3 {
 
   .footer-meta {
     justify-items: start;
+  }
+
+  .footer-meta small {
+    text-align: left;
   }
 }
 

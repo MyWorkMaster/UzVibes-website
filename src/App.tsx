@@ -67,6 +67,7 @@ function Header() {
         <a href="#features">Features</a>
         <a href="#city-vibes">City vibes</a>
         <a href="#download">Download</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
   );
@@ -76,28 +77,30 @@ function DownloadButtons() {
   return (
     <div className="download-buttons" aria-label="Download UZVibes">
       <a
+        id="app-store"
         className="store-button"
         href={downloadLinks.appStore}
-        aria-label="Download UZVibes on the App Store"
+        aria-label="Coming soon on the App Store. Placeholder link for UZVibes."
       >
         <span className="store-icon" aria-hidden="true">
           
         </span>
         <span>
-          <small>Download on</small>
+          <small>Coming soon on</small>
           App Store
         </span>
       </a>
       <a
+        id="google-play"
         className="store-button store-button-alt"
         href={downloadLinks.googlePlay}
-        aria-label="Get UZVibes on Google Play"
+        aria-label="Coming soon on Google Play. Placeholder link for UZVibes."
       >
         <span className="store-icon play-icon" aria-hidden="true">
           ▶
         </span>
         <span>
-          <small>Get it on</small>
+          <small>Coming soon on</small>
           Google Play
         </span>
       </a>
@@ -302,10 +305,30 @@ function CtaSection() {
         <p className="eyebrow">Coming soon</p>
         <h2 id="cta-title">Be ready when Tashkent goes live.</h2>
         <p>
-          Download links are placeholders for now and can be swapped with real store URLs
-          when UZVibes is published.
+          UZVibes is preparing for launch. Store links are placeholders for now and
+          will be replaced when the app is published.
         </p>
         <DownloadButtons />
+      </div>
+    </section>
+  );
+}
+
+function ContactSection() {
+  return (
+    <section className="section-wrap contact-section" id="contact" aria-labelledby="contact-title">
+      <div className="contact-panel glass-panel">
+        <div>
+          <p className="eyebrow">Launching first in Tashkent</p>
+          <h2 id="contact-title">Want early access or partnership updates?</h2>
+          <p>
+            Reach the UZVibes team for launch updates, local partnerships, and early
+            access interest.
+          </p>
+        </div>
+        <a className="contact-link" href="mailto:contact@uzvibes.com">
+          contact@uzvibes.com
+        </a>
       </div>
     </section>
   );
@@ -326,10 +349,15 @@ function Footer() {
       <div className="footer-meta">
         <span>uzvibes.com</span>
         <nav aria-label="Footer links">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
+          <a href="#legal-note" aria-label="Privacy page placeholder">
+            Privacy
+          </a>
+          <a href="#legal-note" aria-label="Terms page placeholder">
+            Terms
+          </a>
           <a href="#contact">Contact</a>
         </nav>
+        <small id="legal-note">Privacy and Terms pages are coming closer to launch.</small>
       </div>
     </footer>
   );
@@ -349,6 +377,7 @@ export default function App() {
         <CityVibesSection />
         <CommunitySection />
         <CtaSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
