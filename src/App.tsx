@@ -184,9 +184,17 @@ function useLegalPage(slug: LegalSlug) {
 
 function Header({ isHome }: { isHome: boolean }) {
   const homePrefix = isHome ? '' : '/';
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navLinks = [
+    { href: `${homePrefix}#features`, label: 'Features' },
+    { href: `${homePrefix}#city-vibes`, label: 'City vibes' },
+    { href: `${homePrefix}#safety`, label: 'Safety' },
+    { href: `${homePrefix}#download`, label: 'Download' },
+    { href: `${homePrefix}#contact`, label: 'Contact' },
+  ];
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${isMenuOpen ? 'menu-open' : ''}`}>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -196,12 +204,23 @@ function Header({ isHome }: { isHome: boolean }) {
         </span>
         UZVibes
       </a>
-      <nav className="header-nav" aria-label="Primary navigation">
-        <a href={`${homePrefix}#features`}>Features</a>
-        <a href={`${homePrefix}#city-vibes`}>City vibes</a>
-        <a href={`${homePrefix}#safety`}>Safety</a>
-        <a href={`${homePrefix}#download`}>Download</a>
-        <a href={`${homePrefix}#contact`}>Contact</a>
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-expanded={isMenuOpen}
+        aria-controls="primary-navigation"
+        onClick={() => setIsMenuOpen((current) => !current)}
+      >
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span className="menu-toggle-label">Menu</span>
+      </button>
+      <nav className="header-nav" id="primary-navigation" aria-label="Primary navigation">
+        {navLinks.map((link) => (
+          <a href={link.href} key={link.href} onClick={() => setIsMenuOpen(false)}>
+            {link.label}
+          </a>
+        ))}
       </nav>
     </header>
   );
