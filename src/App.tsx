@@ -623,7 +623,13 @@ function LegalPage({ slug }: { slug: LegalSlug }) {
         <h1>{page.title}</h1>
         <div className="legal-meta">
           <span>Last updated: {formattedDate}</span>
-          <span>{isLoading ? 'Loading legal CMS content...' : source === 'api' ? 'Loaded from legal CMS' : 'Fallback content'}</span>
+          <span>
+            {isLoading
+              ? 'Loading legal CMS content...'
+              : source === 'api'
+                ? 'Loaded from UZVibes Legal CMS'
+                : 'Fallback placeholder'}
+          </span>
         </div>
         <div className="legal-content">
           {page.content.split('\n').map((paragraph, index) => (

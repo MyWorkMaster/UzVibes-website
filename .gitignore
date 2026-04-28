@@ -12,3 +12,4 @@ __pycache__/
 backend/.venv/
 backend/db.sqlite3
 backend/staticfiles/
+backend/backups/*.json
