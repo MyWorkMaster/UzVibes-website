@@ -77,6 +77,8 @@ Production nginx/static hosting should serve:
 - `/robots.txt`
 - `/site.webmanifest`
 
+`/site.webmanifest` should be served with `application/manifest+json`.
+
 The legal API should remain separate from public page indexing and should keep noindex headers if configured at nginx. The Django admin path must not be linked, documented, or exposed in public frontend assets.
 
 ## Files Changed
