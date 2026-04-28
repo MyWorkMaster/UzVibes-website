@@ -4,8 +4,17 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-uzvibes-legal-cms-secret-key")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
+
+if DEBUG:
+    SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-uzvibes-legal-cms-secret-key")
+else:
+    SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
+
+
+def env_bool(name: str, default: bool = False) -> bool:
+    return os.environ.get(name, str(default)).lower() in {"1", "true", "yes", "on"}
+
 
 ALLOWED_HOSTS = [
     host.strip()
@@ -88,5 +97,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-SESSION_COOKIE_SECURE = os.environ.get("DJANGO_SESSION_COOKIE_SECURE", str(not DEBUG)) == "True"
-CSRF_COOKIE_SECURE = os.environ.get("DJANGO_CSRF_COOKIE_SECURE", str(not DEBUG)) == "True"
+SESSION_COOKIE_SECURE = env_bool("DJANGO_SESSION_COOKIE_SECURE", not DEBUG)
+CSRF_COOKIE_SECURE = env_bool("DJANGO_CSRF_COOKIE_SECURE", not DEBUG)
+SECURE_SSL_REDIRECT = env_bool("DJANGO_SECURE_SSL_REDIRECT", False)
