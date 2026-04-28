@@ -144,10 +144,22 @@ Django:
 DJANGO_SECRET_KEY=replace-me
 DJANGO_DEBUG=1
 DJANGO_ALLOWED_HOSTS=127.0.0.1,localhost
+DJANGO_CSRF_TRUSTED_ORIGINS=https://uzvibes.com
 DJANGO_SQLITE_PATH=/optional/path/to/db.sqlite3
+DJANGO_ADMIN_PATH=uzvibes-legal-admin/
+DJANGO_STATIC_URL=/django-static/
 ```
 
 The frontend still builds and runs if `VITE_LEGAL_API_BASE_URL` is missing.
+
+## Production admin exposure
+
+- The Django admin path is configurable through `DJANGO_ADMIN_PATH`.
+- The default `/admin/` URL should not be exposed in production.
+- Production nginx should proxy only the configured secret admin path to Django.
+- The admin URL should not be linked from the public website.
+- Django admin still requires staff/superuser authentication.
+- Admin and Django static responses should be sent with `X-Robots-Tag: noindex`.
 
 ## How to run the frontend
 
