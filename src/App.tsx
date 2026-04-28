@@ -572,7 +572,6 @@ function Footer({ isHome }: { isHome: boolean }) {
         <p>Built for the next generation of city social life.</p>
       </div>
       <div className="footer-meta">
-        <span>uzvibes.com</span>
         <nav aria-label="Footer links">
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
