@@ -271,12 +271,15 @@ function PhoneMockup() {
       <div className="phone-shell" aria-hidden="true">
         <div className="phone-notch" />
         <div className="phone-screen">
+          <img className="app-watermark" src="/website-logo.png" alt="" />
           <div className="app-topbar">
             <div>
               <span className="app-kicker">Tonight in</span>
               <strong>Tashkent</strong>
             </div>
-            <span className="profile-dot" />
+            <span className="app-logo-chip">
+              <img src="/website-logo.png" alt="" />
+            </span>
           </div>
 
           <div className="vibe-meter">
@@ -299,22 +302,22 @@ function PhoneMockup() {
 
           <div className="app-card active">
             <div>
-              <span className="app-card-label">C1</span>
-              <strong>Active now</strong>
+              <span className="app-card-label">Active spots</span>
+              <strong>C1 is active</strong>
             </div>
-            <span>🔥 312</span>
+            <span>312 live</span>
           </div>
           <div className="app-card">
             <div>
-              <span className="app-card-label">Shevchenko</span>
-              <strong>Trending chat</strong>
+              <span className="app-card-label">Tonight's events</span>
+              <strong>Shevchenko pop-up</strong>
             </div>
-            <span>+96</span>
+            <span>21:00</span>
           </div>
           <div className="app-card">
             <div>
-              <span className="app-card-label">Friends</span>
-              <strong>4 nearby</strong>
+              <span className="app-card-label">Friends nearby</span>
+              <strong>4 friends around</strong>
             </div>
             <span>XP +120</span>
           </div>
