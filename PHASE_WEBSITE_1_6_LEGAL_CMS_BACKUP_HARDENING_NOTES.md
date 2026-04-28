@@ -108,7 +108,7 @@ set +a
 Copy backups from server:
 
 ```bash
-scp root@45.80.148.101:/var/backups/uzvibes/legal_pages_YYYYMMDD_HHMMSS.json .
+scp user@your-server:/var/backups/uzvibes/legal_pages_YYYYMMDD_HHMMSS.json .
 ```
 
 Restore on production:
