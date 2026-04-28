@@ -200,7 +200,7 @@ function Header({ isHome }: { isHome: boolean }) {
       </a>
       <a className="brand" href="/" aria-label="UZVibes home">
         <span className="brand-mark" aria-hidden="true">
-          UZ
+          <img src="/website-logo.png" alt="" />
         </span>
         UZVibes
       </a>
@@ -565,7 +565,7 @@ function Footer({ isHome }: { isHome: boolean }) {
       <div>
         <a className="brand" href="/" aria-label="UZVibes home">
           <span className="brand-mark" aria-hidden="true">
-            UZ
+            <img src="/website-logo.png" alt="" />
           </span>
           UZVibes
         </a>
